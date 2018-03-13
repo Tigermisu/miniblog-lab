@@ -13,9 +13,12 @@
     <Compile Remove="Migrations\20180311200629_ModifiedPageKeys.Designer.cs" />
     <Compile Remove="Migrations\20180311201015_AddedVirtualsAndFixedForeigns.cs" />
     <Compile Remove="Migrations\20180311201015_AddedVirtualsAndFixedForeigns.Designer.cs" />
+    <Compile Remove="Migrations\20180313030631_FixedForeignKey.cs" />
+    <Compile Remove="Migrations\20180313030631_FixedForeignKey.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Markdig" Version="0.14.9" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />

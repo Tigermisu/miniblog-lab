@@ -48,7 +48,7 @@ namespace miniblog.Controllers
         // GET: Pages/Create
         public IActionResult Create()
         {
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id");
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
             return View();
         }
 
@@ -82,7 +82,7 @@ namespace miniblog.Controllers
             {
                 return NotFound();
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id", page.CategoryId);
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", page.CategoryId);
             return View(page);
         }
 

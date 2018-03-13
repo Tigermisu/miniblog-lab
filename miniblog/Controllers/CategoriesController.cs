@@ -40,6 +40,8 @@ namespace miniblog.Controllers
                 return NotFound();
             }
 
+            ViewData["Count"] = _context.Pages.Where(p => p.CategoryId == id).Count();
+
             return View(category);
         }
 

@@ -1,7 +1,7 @@
 ﻿@model miniblog.Models.Page
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Delete Page";
 }
 
 <h2>Delete</h2>
@@ -33,7 +33,7 @@
             @Html.DisplayNameFor(model => model.Content)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Content)
+            @Html.Raw(Markdown.ToHtml(Model.Content))
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Category)

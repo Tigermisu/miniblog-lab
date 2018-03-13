@@ -28,8 +28,9 @@ namespace miniblog.Models
         [Required]
         public string Content { get; set; }
 
-        [ForeignKey("Category")]
         public int CategoryId { get; set; }
+
+        [ForeignKey("CategoryId")]
         public virtual Category Category { get; set; }
     }
 }

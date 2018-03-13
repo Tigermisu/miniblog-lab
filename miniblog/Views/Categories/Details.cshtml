@@ -1,7 +1,7 @@
 ﻿@model miniblog.Models.Category
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Category Details";
 }
 
 <h2>Details</h2>
@@ -15,6 +15,12 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            Pages
+        </dt>
+        <dd>
+            @ViewData["Count"]
         </dd>
     </dl>
 </div>

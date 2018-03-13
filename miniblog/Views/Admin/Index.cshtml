@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Admin Panel";
+}
+
+<h2>Admin Panel</h2>
+<p>@DateTime.Now</p>
+<div class="row panel-wrapper">
+    <div class="col-sm-6">
+        <a asp-area="" asp-controller="Pages" asp-action="Index">
+            <div class="admin-panel">
+                <h3>Pages</h3>
+            </div>
+        </a>
+    </div>
+    <div class="col-sm-6">
+        <a asp-area="" asp-controller="Categories" asp-action="Index">
+            <div class="admin-panel">
+                <h3>Categories</h3>
+            </div>
+        </a>
+    </div>
+</div>
+
