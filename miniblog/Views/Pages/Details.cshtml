@@ -40,7 +40,7 @@
 <div class="preview-wrapper">
     <h4>Preview</h4>
     <div class="content-preview">
-        @Html.Raw(Markdown.ToHtml(Model.Content))
+        @Html.Raw(Markdown.ToHtml(Model.Content).Replace("<script>", "&lt;script&gt;").Replace("</script>", "&lt;/script&gt;"))
     </div>
 </div>
 

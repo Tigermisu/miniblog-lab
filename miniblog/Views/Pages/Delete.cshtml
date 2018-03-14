@@ -30,19 +30,20 @@
             @Html.DisplayFor(model => model.Author)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
-        <dd>
-            @Html.Raw(Markdown.ToHtml(Model.Content))
-        </dd>
-        <dt>
             @Html.DisplayNameFor(model => model.Category)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Category.Id)
+            @Html.DisplayFor(model => model.Category.Name)
         </dd>
     </dl>
-    
+
+    <div class="preview-wrapper">
+        <h4>Preview</h4>
+        <div class="content-preview">
+            @Html.Raw(Markdown.ToHtml(Model.Content).Replace("<script>", "&lt;script&gt;").Replace("</script>", "&lt;/script&gt;"))
+        </div>
+    </div>
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-default" /> |

@@ -24,5 +24,7 @@ $(function() {
 });
 
 function updatePreview(mdText) {
-    $('#previewOutput').html(marked(mdText));
+    $('#previewOutput').html(marked(mdText, {
+        sanitize: true
+    }));
 }
